@@ -36,14 +36,14 @@ import {
 import SolMintNftIdl from "../idl/sol_mint_nft.json";
 
 const TOKEN_METADATA_PROGRAM_ID = new anchor.web3.PublicKey(
-  "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+  "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s" // TODO: replace with env
 );
 
 const SOL_MINT_NFT_PROGRAM_ID = new anchor.web3.PublicKey(
-  "9FKLho9AUYScrrKgJbG1mExt5nSgEfk1CNEbR8qBwKTZ"
+  "9FKLho9AUYScrrKgJbG1mExt5nSgEfk1CNEbR8qBwKTZ" // TODO: replace with env
 );
 
-const NFT_SYMBOL = "ani-nft";
+const NFT_SYMBOL = "ani-nft"; // TODO: replace with env
 
 const ipfs = ipfsClient.create({
   host: "ipfs.infura.io",

@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use anchor_lang::solana_program::program::invoke;
 use anchor_spl::token::mint_to;
 use anchor_spl::token::{MintTo, Token};
-use mpl_token_metadata::instruction::{create_metadata_accounts_v2};
+use mpl_token_metadata::instruction::{create_metadata_accounts_v3};
 
 declare_id!("9FKLho9AUYScrrKgJbG1mExt5nSgEfk1CNEbR8qBwKTZ");
 
@@ -55,7 +55,7 @@ pub mod sol_mint_nft {
             },
         ];
         let result = invoke(
-            &create_metadata_accounts_v2(
+            &create_metadata_accounts_v3(
                 ctx.accounts.token_metadata_program.key(),
                 ctx.accounts.metadata.key(),
                 ctx.accounts.mint.key(),
@@ -71,6 +71,7 @@ pub mod sol_mint_nft {
                 false,
                 None,
                 None,
+                None
             ),
             &accounts
         );

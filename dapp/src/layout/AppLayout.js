@@ -1,6 +1,7 @@
 import { Layout, Row, Col } from "antd";
 import { Content, Footer, Header } from "antd/lib/layout/layout";
 import Minter from "../containers/Minter";
+import Posts from '../containers/Posts';
 import WrongNetwork from "../containers/WrongNetwork";
 import logo from "../images/sol.png";
 import { Route, Routes } from "react-router-dom";
@@ -22,7 +23,7 @@ const AppLayout = () => {
               </Col>
               <Col>
                 <h1>
-                  <font color="white">Solana NFT Minter</font>
+                  <font color="white">App Name Placeholder</font>
                 </h1>
               </Col>
               <Col flex="auto"></Col>
@@ -34,8 +35,9 @@ const AppLayout = () => {
           <Content>
             {connected && publicKey != null && (
               <Routes>
-                <Route path="/" element={<Minter />} />
+                <Route path="/" element={<Posts />} />
                 <Route path="/mint" element={<Minter />} />
+                <Route path="/posts" element={<Posts />} />
               </Routes>
             )}
             {connected == false && <WrongNetwork />}
@@ -47,7 +49,7 @@ const AppLayout = () => {
               bottom: 0,
             }}
           >
-            © 2022 All rights reserved by Daniel Armstrong.
+            © 2022 Wonderbean LLC.
           </Footer>
         </Layout>
       </Col>
